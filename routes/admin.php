@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\PageController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\RatingController;
 use App\Http\Controllers\Backend\ShippingController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Backend\UserController;
@@ -18,6 +19,9 @@ Route::get('/orders/{id}',[OrderController::class,'view'])->name('admin.orders.v
 Route::put('/status/update/{id}',[OrderController::class,'updateStatus'])->name('admin.update.status');
 Route::get('/users',[UserController::class,'index'])->name('admin.users');
 Route::delete('/user/{id}',[UserController::class,'destroy'])->name('admin.user.destroy');
+Route::get('ratings',[RatingController::class,'index'])->name('admin.ratings');
+Route::post('/ratings/toggle-status', [RatingController::class, 'toggleRatingStatus'])->name('ratings.toggle-status');
+
 
 
 Route::resources([

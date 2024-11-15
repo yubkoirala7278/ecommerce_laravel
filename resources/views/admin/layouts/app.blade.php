@@ -164,6 +164,12 @@
                                 <p>Pages</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.ratings')}}" class="nav-link">
+                                <i class="nav-icon  far fa-file-alt"></i>
+                                <p>Ratings</p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

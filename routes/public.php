@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ProductControler;
+use App\Http\Controllers\Frontend\RatingController;
 use App\Http\Controllers\Frontend\ShopController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,4 @@ Route::delete('/remove-wishlist-product/{id}',[AuthController::class,'removeWish
 Route::put('/update-user-password',[AuthController::class,'updateUserProfilePassword'])->name('frontend.update.user.password');
 Route::get('/about-us',[HomeController::class,'aboutUs'])->name('frontend.aboutus');
 Route::get('/terms-and-conditions',[HomeController::class,'termsAndConditions'])->name('frontend.terms_and_conditions');
+Route::post('/rating',[RatingController::class,'submitRating'])->name('frontend.submit_rating');

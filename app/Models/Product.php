@@ -35,4 +35,8 @@ class Product extends Model
     public function images(){
         return $this->morphMany(Image::class,'model');
     }
+
+    public function product_ratings(){
+        return $this->hasMany(Rating::class)->where('status',1);
+    }
 }
